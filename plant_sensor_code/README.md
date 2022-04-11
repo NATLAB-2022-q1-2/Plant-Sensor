@@ -1,4 +1,4 @@
-# LilyGO TTGO T-HiGrow
+# plant
 ## TTGO T-HIGrow MQTT autodiscover interface for Homeassistant
 
 ![](https://github.com/pesor/TIGO-T-HIGrow/blob/master/images/T-Higrow.jpg)
