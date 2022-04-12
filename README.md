@@ -21,8 +21,9 @@ For the hardware you will need the following:
 
 
 ## IoT device
-This project is based of of [Pesor's TTGO-T-HIGrow project](https://github.com/pesor/TTGO-T-HIGrow) code. Before you can start configuring, you need to make sure you have the right environment setup, for this you will need **Visual Studio Code** paired with the **PlatformIO extension**.the following video will give you a good idea how to set them both up.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sm6QxJkWcSc?start=263" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+This project is based of of [Pesor's TTGO-T-HIGrow project](https://github.com/pesor/TTGO-T-HIGrow) code. Before you can start configuring, you need to make sure you have the right environment setup, for this you will need **Visual Studio Code** paired with the **PlatformIO extension**. The following video will give you a good idea how to set them both up.
+[![explanation video](https://img.youtube.com/vi/sm6QxJkWcSc/0.jpg)](https://youtu.be/sm6QxJkWcSc?t=263)
+
 
 Before you can upload the code to your device you need to setup the config file located at include/user-variables.h.
 You need to setup your network connection, broker connection and configure sensor data.
