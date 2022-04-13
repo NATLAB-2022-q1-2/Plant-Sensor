@@ -71,7 +71,7 @@ From the list of agents, you should pick **the MQTT Agent**. the agent can reall
 <br/><br/>
 
 ![configure_agent.png](media/configure_agent.png)<br/>
-The agent needs to be configured to the broker you are using. In my case it will be the HiveMQ broker. You have to configure the **Host** ** and **port** fields to be the same as the broker you are using. The **Client id** field can be whatever you want, it will only be used for the broker to identify the connection from Open Remote to your broker.
+The agent needs to be configured to the broker you are using. In my case it will be the HiveMQ broker. You have to configure the **Host** and **port** fields to be the same as the broker you are using. The **Client id** field can be whatever you want, it will only be used for the broker to identify the connection from Open Remote to your broker.
 <br/><br/>
 
 ![add_asset_plant.png](media/add_asset_plant.png)<br/>
