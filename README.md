@@ -65,9 +65,19 @@ HiveMQ is a free to use test broker on which anyone can pub and sub to any topic
 Open Remote's wiki page has a really good and comprehensive [quick start guide](https://github.com/openremote/openremote/blob/master/README.md) that will help you setup your staring OR environment.
 
 ### Configuring
-![](media/add_agent.png)
-![](media/configure_agent.png)
-![](media/add_asset_plant.png)
-![](media/add_asset_sensor.png)
-![](media/configure_asset_JSON_attribute.png)
-![](media/configure_asset_text_attribute.png)
+First up on the todo list is to make ourselves a **agent**. An agent can be added via going to the asset tab and clicking the + icon
+![add_agent.png](media/add_agent.png)<br/>
+From the list of agents, you should pick **the MQTT Agent**. the agent can really be named anything you want it to be. I choose to name it after the broker I'm using, **HiveMQ**.
+<br/><br/>
+
+![configure_agent.png](media/configure_agent.png)<br/>
+The agent needs to be configured to the broker you are using. In my case it will be the HiveMQ broker. You have to configure the **Host** ** and **port** fields to be the same as the broker you are using. The **Client id** field can be whatever you want, it will only be used for the broker to identify the connection from Open Remote to your broker.
+<br/><br/>
+
+![add_asset_plant.png](media/add_asset_plant.png)<br/>
+
+<br/><br/>
+
+![add_asset_sensor.png](media/add_asset_sensor.png)<br/>
+![configure_asset_JSON_attribute.png](media/configure_asset_JSON_attribute.png)<br/>
+![configure_asset_text_attribute.png](media/configure_asset_text_attribute.png)<br/>
