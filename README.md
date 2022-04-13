@@ -17,13 +17,14 @@ For the hardware you will need the following:
 -   **[Docker](https://docs.docker.com/desktop/windows/install/).** *Docker is required to for the Open Remote instance to run.*
 -   **[Open Remote](https://github.com/openremote/openremote/blob/master/README.md) instance (Docker).** *Open Remote is used to display sensor data.*
 -   **[Visual Studio Code](https://code.visualstudio.com/) with [PlatformIO extension](https://platformio.org/install/ide?install=vscode).** *VSC is a code editor and PlatformIO is a extension that will help you run and monitor code for the IoT device.*
+-   **[HiveMQ](https://www.hivemq.com/public-mqtt-broker/)(MQTT broker).** *free MQTT testing broker*
 
 
 
 ## IoT device
-This project is based of of [Pesor's TTGO-T-HIGrow project](https://github.com/pesor/TTGO-T-HIGrow) code. Before you can start configuring, you need to make sure you have the right environment setup, for this you will need **Visual Studio Code** paired with the **PlatformIO extension**. The following video will give you a good idea how to set them both up.
+This project is based of of [Pesor's TTGO-T-HIGrow project](https://github.com/pesor/TTGO-T-HIGrow) code. Before you can start configuring, you need to make sure you have the right environment setup, for this you will need **Visual Studio Code** paired with the **PlatformIO extension**. The following video will give you a good idea how to set them both up.<br/>
 [![explanation video](https://img.youtube.com/vi/sm6QxJkWcSc/0.jpg)](https://youtu.be/sm6QxJkWcSc?t=263)
-
+<br/>
 
 Before you can upload the code to your device you need to setup the config file located at include/user-variables.h.
 You need to setup your network connection, broker connection and configure sensor data.
@@ -35,24 +36,38 @@ In order to configure the device to your needs, you need to set your network nam
 
 ![broker_settings.png](media/broker_settings.png)<br/>
 For the broker you need to insert your brokers address and your port. The port usually is 1883.
-If you are using a broker that requires credentials you can add them in the `mqttuser` and `mqttpass` field
+If you are using a broker that requires credentials you can add them in the `mqttuser` and `mqttpass` field.
+if you choose to use the HiveMQ broker then the `broker` should be `broker.hivemq.com`
 <br/><br/>
 
 ![sensor_settings.png](media/sensor_settings.png)<br/>
 To calibrate the soil sensor.....
 <br/><br/>
 
+gather model number for topic
+
 For more info please visit [Pesor's TTGO-T-HIGrow project setup guide](https://github.com/pesor/TTGO-T-HIGrow/wiki/05.-user-variables.h)
 
 ## Broker
-### Using HiveMQTT(no setup required)
+### Using HiveMQ(no setup required)
+HiveMQ is a free to use test broker on which anyone can pub and sub to any topic. The downside to this is that anyone with your sensors model name could theoretically listen in on all the data being send. But the upside is that it is free and requires no setup, meaning it's a nice place to start and test from.
+|                   |                   |
+|-------------------|-------------------|
+| **Broker address** | broker.hivemq.com |
+| **TCP port**      | 1883              |
 
 ### Using Mosquito
+*Not yet done.*
 
 ## Open Remote
 
-### Installing open remote
+### Installing 
 Open Remote's wiki page has a really good and comprehensive [quick start guide](https://github.com/openremote/openremote/blob/master/README.md) that will help you setup your staring OR environment.
 
 ### Configuring
-https://youtu.be/sm6QxJkWcSc?t=263
+![](media/add_agent.png)
+![](media/configure_agent.png)
+![](media/add_asset_plant.png)
+![](media/add_asset_sensor.png)
+![](media/configure_asset_JSON_attribute.png)
+![](media/configure_asset_text_attribute.png)
