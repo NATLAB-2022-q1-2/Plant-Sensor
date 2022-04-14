@@ -75,9 +75,15 @@ The agent needs to be configured to the broker you are using. In my case it will
 <br/><br/>
 
 ![add_asset_plant.png](media/add_asset_plant.png)<br/>
-
+The next thing you to add is the plant itself. from the asset list, you should select the **Thing Asset** and name it after your plant. this is going to be the central place for all your plant data.
 <br/><br/>
 
 ![add_asset_sensor.png](media/add_asset_sensor.png)<br/>
+After having added a plant you should add another **Thing Asset**. this one should have the **Name** field set to the sensor name(or whatever makes it easier for you) and the **Parent** field should be your previously added plant asset. this asset will directly act as one sensor. The reason for this setup is that you might want to add multiple sensors to your plant if you have a big pot/plant.
+<br/><br/>
+
 ![configure_asset_JSON_attribute.png](media/configure_asset_JSON_attribute.png)<br/>
+
+<br/><br/>
+
 ![configure_asset_text_attribute.png](media/configure_asset_text_attribute.png)<br/>
