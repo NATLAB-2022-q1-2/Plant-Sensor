@@ -99,4 +99,4 @@ for the sensor assets you need to change each individual attribute. Each attribu
 
 ![rules.png](media/Rules.png)<br/>
 In to display the the general sum of all the sensors for a plant on the plant page, you need to setup some rules.
-the image shows a rule for each attribute, its pretty simple and adds 2 sensors attribute value together and divides them by the amount of sensors. if you want to connect a single sensor to a single plant, you only need to connect the read attribute to the write attribute.
+The image shows a rule for each attribute, its pretty simple and adds 2 sensors attribute value together and divides them by the amount of sensors. If you want to connect a single sensor to a single plant, you only need to connect the read attribute to the write attribute.
