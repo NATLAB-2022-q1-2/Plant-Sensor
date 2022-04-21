@@ -97,3 +97,6 @@ The plant asset's attributes need to have a **rule state** configurational item.
 for the sensor assets you need to change each individual attribute. Each attribute has a **agent link** with one **subscribe topic** and one **value filter** parameter. The **subscribe topic** should be setup like the previous one. The **value filter** should contain a **JSON PATH** with the path to the value relating to the attribute. you need to do this for each individual attribute in the sensor.
 <br/><br/>
 
+![rules.png](media/Rules.png)<br/>
+In to display the the general sum of all the sensors for a plant on the plant page, you need to setup some rules.
+the image shows a rule for each attribute, its pretty simple and adds 2 sensors attribute value together and divides them by the amount of sensors. if you want to connect a single sensor to a single plant, you only need to connect the read attribute to the write attribute.
