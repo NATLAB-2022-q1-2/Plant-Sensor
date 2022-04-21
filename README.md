@@ -83,7 +83,17 @@ After having added a plant you should add another **Thing Asset**. this one shou
 <br/><br/>
 
 ![configure_asset_JSON_attribute.png](media/configure_asset_JSON_attribute.png)<br/>
+The simple way to set it up is to output the data from the IoT device as JSON. To do this you need to add a attribute, the name can be something like `data` or whatever you like . the type should be **JSON** or **JSON OBJECT**. After having added the attribute, you need to add a **agent link** configurational item. The **agent id** should be set to your MQTT broker agent. last but most importantly, you need to add a **subscription topic** parameter, put `Tgrow_HIGrow/`+`YOUR_MODEL_NUMBER_HERE`.
 
 <br/><br/>
 
+### Advanced config
+The advanced config will allow you to setup a plant in such a way that you can use multiple sensors for one plant and get an average. It will also make the data better readable.
+<br/><br/>
+First thing you need to do is change your plant and sensor assets. Both assets need to have 4 individual sensor attributes each: temperature, soil_moisture, humidity, and light.<br/>
+The plant asset's attributes need to have a **rule state** configurational item.
+
 ![configure_asset_text_attribute.png](media/configure_asset_text_attribute.png)<br/>
+for the sensor assets you need to change each individual attribute. Each attribute has a **agent link** with one **subscribe topic** and one **value filter** parameter. The **subscribe topic** should be setup like the previous one. The **value filter** should contain a **JSON PATH** with the path to the value relating to the attribute. you need to do this for each individual attribute in the sensor.
+<br/><br/>
+

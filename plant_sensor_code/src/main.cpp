@@ -202,6 +202,127 @@ void setup()
     Serial.println(F("Error initialising BH1750"));
   }
 
+  // float luxRead = lightMeter.readLightLevel(); // 1st read seems to return 0 always
+  // Serial.print("lux ");
+  // Serial.println(luxRead);
+  // delay(2000);
+
+  // if (dht_found)
+  // {
+  //   float t12 = dht.readTemperature(); // Read temperature as Fahrenheit then dht.readTemperature(true)
+  //   config.temp = t12;
+  //   delay(2000);
+  //   float h12 = dht.readHumidity();
+  //   config.humid = h12;
+  // }
+
+  // if (bme_found)
+  // {
+  //   float bme_temp = bmp.readTemperature();
+  //   config.temp = bme_temp;
+
+  //   float bme_humid = bmp.readHumidity();
+  //   config.humid = bme_humid;
+
+  //   float bme_pressure = (bmp.readPressure() / 100.0F);
+  //   config.pressure = bme_pressure;
+  // }
+
+  // uint16_t soil = readSoil();
+  // config.soil = soil;
+  // float soilTemp = readSoilTemp();
+  // config.soilTemp = soilTemp;
+
+  // uint32_t salt = readSalt();
+  // config.salt = salt;
+  // String advice;
+  // if (salt < 201)
+  // {
+  //   advice = "needed";
+  // }
+  // else if (salt < 251)
+  // {
+  //   advice = "low";
+  // }
+  // else if (salt < 351)
+  // {
+  //   advice = "optimal";
+  // }
+  // else if (salt > 350)
+  // {
+  //   advice = "too high";
+  // }
+  // Serial.println(advice);
+  // config.saltadvice = advice;
+
+  // // Battery status, and charging status and days.
+  // float bat = readBattery();
+  // config.bat = bat;
+  // config.batcharge = "";
+  // Serial.println("Battery level");
+  // Serial.println(bat);
+  // if (bat > 130)
+  // {
+  //   config.batcharge = "charging";
+  //   SPIFFS.remove("/batinfo.conf");
+  //   epochChargeTime = timeClient.getEpochTime();
+  //   battChargeEpoc = String(epochChargeTime) + ":" + String(dayStamp);
+  //   const char *batinfo_write = battChargeEpoc.c_str();
+  //   writeFile(SPIFFS, "/batinfo.conf", batinfo_write);
+  //   Serial.println("dayStamp");
+  //   Serial.println(dayStamp);
+  //   config.batchargeDate = dayStamp;
+  // }
+
+  // Serial.println("Charge Epoc");
+  // Serial.println(battChargeEpoc);
+  // unsigned long epochTime = timeClient.getEpochTime();
+  // Serial.println("Test Epoc");
+  // Serial.println(epochTime);
+  // epochChargeTime = battChargeEpoc.toInt();
+  // Serial.println("first calculation");
+  // Serial.println(epochTime - epochChargeTime);
+  // float epochTimeFl = float(epochTime);
+  // float epochChargeTimeFl = float(epochChargeTime); 
+  
+
+  // daysOnBattery = (epochTimeFl - epochChargeTimeFl) / battChargeDateDivider;
+  // daysOnBattery = truncate(daysOnBattery, 1);
+  // config.daysOnBattery = daysOnBattery;
+
+  // if (bat > 100)
+  // {
+  //   config.bat = 100;
+  // }
+
+  // config.bootno = bootCount;
+
+  // luxRead = lightMeter.readLightLevel();
+  // Serial.print("lux ");
+  // Serial.println(luxRead);
+  // config.lux = luxRead;
+  // config.rel = rel;
+
+  // // Create JSON file
+  // Serial.println(F("Creating JSON document..."));
+  // if (logging)
+  // {
+  //   writeFile(SPIFFS, "/error.log", "Creating JSON document...! \n");
+  // }
+  // saveConfiguration(config);
+
+  // // Go to sleep
+  // //Increment boot number and print it every reboot
+  // ++bootCount;
+  // Serial.println("Boot number: " + String(bootCount));
+
+  // //Go to sleep now
+  // delay(1000);
+  // goToDeepSleep();
+}
+
+void loop()
+{
   float luxRead = lightMeter.readLightLevel(); // 1st read seems to return 0 always
   Serial.print("lux ");
   Serial.println(luxRead);
@@ -318,9 +439,4 @@ void setup()
 
   //Go to sleep now
   delay(1000);
-  goToDeepSleep();
-}
-
-void loop()
-{
 }
